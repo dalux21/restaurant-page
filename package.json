@@ -1,0 +1,33 @@
+{
+  "name": "restaurant-page",
+  "version": "1.0.0",
+  "description": "Restaurant page built using webpack Excercise for The Odin Project full stack curriculum",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dalux21/restaurant-page.git"
+  },
+  "keywords": [
+    "webpack",
+    "restaurant-page",
+    "the",
+    "odin",
+    "project"
+  ],
+  "author": "Davide Lucifora",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dalux21/restaurant-page/issues"
+  },
+  "homepage": "https://github.com/dalux21/restaurant-page#readme",
+  "devDependencies": {
+    "webpack": "^5.25.0",
+    "webpack-cli": "^4.5.0"
+  },
+  "dependencies": {
+    "tabsy-css": "^1.0.0"
+  }
+}
