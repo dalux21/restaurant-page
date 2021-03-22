@@ -74,11 +74,15 @@ h3{
     margin-top:3rem;
 }
 
-#about{
+.main-content{
     margin-top:5rem;
     width:40vw;
     align-self:flex-end;
-    font-size:1.2rem;
+    font-size:1.2rem;}
+#about{
+    display:none;
+}
+#contact{
 }
 #our-story{
     color:var(--liver);
