@@ -1,31 +1,21 @@
 const loadHome = () => {
     //Create Elements
-    const content = document.getElementById('content')
-    const header = document.createElement('div')
-    const h1Title = document.createElement('h1')
-    const h2Title = document.createElement('h2')
     const aboutDiv = document.createElement('div')
     const ourStoryTitle = document.createElement('h3')
     const ourStoryParagraph = document.createElement('p')
 
     //Assign IDs and Classes
-    header.id = 'header'
+  
     aboutDiv.id = 'about'
+    aboutDiv.classList.add('main-content')
     ourStoryParagraph.id = 'our-story'
-    content.classList.add('tabsy')
 
     //Append Elements
-    content.appendChild(header);
-    header.appendChild(h1Title);
-    header.appendChild(h2Title);
-    content.appendChild(aboutDiv)
     aboutDiv.appendChild(ourStoryTitle)
     aboutDiv.appendChild(ourStoryParagraph)
 
 
     //Add Content
-    h1Title.textContent = 'Tiko\'s'
-    h2Title.textContent = 'All About Food.'
     ourStoryTitle.textContent = 'Our Story'
     ourStoryParagraph.textContent = `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
     Elementum integer enim neque volutpat ac tincidunt vitae semper quis. Ac turpis egestas integer eget aliquet nibh. 
@@ -38,30 +28,8 @@ const loadHome = () => {
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
     Elementum integer enim neque volutpat ac tincidunt vitae.`
 
-    //Create navigation
-        function createNavBar(){
-            const navBar = document.createElement('nav')
-            
-            //Create Tab Links
-            const navTabs = {
-            home : document.createElement('div'),
-            menu : document.createElement('div'),
-            contact : document.createElement('div')
-            }
 
-            //Loop through the navTabs objects
-            const entries = Object.entries(navTabs)
-            for (const [name, element] of entries) {
-                element.classList.add('nav-link')
-                element.textContent = name
-                element.id = name + '-tab'
-                navBar.appendChild(element)
-            }
 
-        aboutDiv.prepend(navBar)
-    }
-
-    createNavBar()
 }
 
 export default loadHome
