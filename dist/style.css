@@ -26,6 +26,26 @@ body {
     flex-flow:column wrap;
     align-items:center;
 }
+#header{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+nav{
+    display:flex;
+    align-items:space-between;
+    width:20rem;
+    justify-content:space-between;
+    margin-top:2rem;
+    font-size:1.5rem;
+}
+.nav-link, .nav-link    {
+    text-decoration:none;
+    color:var(--cadet-blue);
+    cursor:pointer;
+
+}
 #content{
     display:flex;
     flex-flow:column wrap;

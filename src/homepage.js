@@ -8,10 +8,11 @@ const loadHome = () => {
     const ourStoryTitle = document.createElement('h3')
     const ourStoryParagraph = document.createElement('p')
 
-    //Assign IDs
+    //Assign IDs and Classes
     header.id = 'header'
     aboutDiv.id = 'about'
     ourStoryParagraph.id = 'our-story'
+    content.classList.add('tabsy')
 
     //Append Elements
     content.appendChild(header);
@@ -20,6 +21,7 @@ const loadHome = () => {
     content.appendChild(aboutDiv)
     aboutDiv.appendChild(ourStoryTitle)
     aboutDiv.appendChild(ourStoryParagraph)
+
 
     //Add Content
     h1Title.textContent = 'Tiko\'s'
@@ -36,6 +38,30 @@ const loadHome = () => {
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
     Elementum integer enim neque volutpat ac tincidunt vitae.`
 
+    //Create navigation
+        function createNavBar(){
+            const navBar = document.createElement('nav')
+            
+            //Create Tab Links
+            const navTabs = {
+            home : document.createElement('div'),
+            menu : document.createElement('div'),
+            contact : document.createElement('div')
+            }
+
+            //Loop through the navTabs objects
+            const entries = Object.entries(navTabs)
+            for (const [name, element] of entries) {
+                element.classList.add('nav-link')
+                element.textContent = name
+                element.id = name + '-tab'
+                navBar.appendChild(element)
+            }
+
+        aboutDiv.prepend(navBar)
+    }
+
+    createNavBar()
 }
 
 export default loadHome
