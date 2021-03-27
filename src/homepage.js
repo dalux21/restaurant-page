@@ -5,7 +5,6 @@ const loadHome = () => {
     const ourStoryParagraph = document.createElement('p')
 
     //Assign IDs and Classes
-  
     aboutDiv.id = 'about'
     aboutDiv.classList.add('main-content')
     ourStoryParagraph.id = 'our-story'
