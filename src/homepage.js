@@ -10,9 +10,8 @@ const loadHome = () => {
     ourStoryParagraph.id = 'our-story'
 
     //Append Elements
-    aboutDiv.appendChild(ourStoryTitle)
-    aboutDiv.appendChild(ourStoryParagraph)
-
+    const content = document.getElementById('content')
+    content.appendChild(ourStoryParagraph)
 
     //Add Content
     ourStoryTitle.textContent = 'Our Story'
@@ -26,9 +25,10 @@ const loadHome = () => {
     Vitae auctor eu augue ut lectus. Et netus et malesuada fames ac turpis egestas sed.
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
     Elementum integer enim neque volutpat ac tincidunt vitae.`
-
-
-
+    
+    content.appendChild(aboutDiv)
+    aboutDiv.appendChild(ourStoryTitle)
+    aboutDiv.appendChild(ourStoryParagraph)
 }
 
 export default loadHome

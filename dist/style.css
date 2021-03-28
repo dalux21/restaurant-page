@@ -79,8 +79,34 @@ h3{
     width:40vw;
     align-self:flex-end;
     font-size:1.2rem;}
-#about{
-    display:none;
+}
+#menu{
+    display:flex;
+    flex-flow:column;
+}
+#menu ul {
+    display:flex;
+    flex-flow:column;
+}
+#menu ul li {
+    list-style-type: none;
+    margin-top:1rem;
+    display:flex;
+    align-items:center;
+    border:1px solid var(--vivid-tangerine);
+    box-shadow:2px 2px 6px rgba(0,0,0,0.1),
+                4px 4px 4px rgba(0,0,0,0.1);
+}
+#menu ul li img {
+    height:150px;
+    width:150px;
+}
+#menu ul li .menu-item-name{
+    font-size:2rem;
+    color:var(--cadet-blue);
+}
+#menu ul li .menu-group {
+    margin-left:2rem;
 }
 #contact{
 }
