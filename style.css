@@ -12,6 +12,7 @@ html {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    height:100%;
 }
 
 body {
@@ -19,12 +20,16 @@ body {
     padding:0;
     color:var(--vivid-tangerine);
     font-family: 'Oxygen', sans-serif;
+    height:100%;
 
 }
 #container{
     display:flex;
-    flex-flow:column wrap;
+    flex-flow:column;
     align-items:center;
+    min-height:100%;
+    justify-content:space-between;
+    flex:1 0 auto;
 }
 #header{
     display:flex;
@@ -79,7 +84,7 @@ h3{
     width:40vw;
     align-self:flex-end;
     font-size:1.2rem;}
-}
+
 #menu{
     display:flex;
     flex-flow:column;
@@ -109,8 +114,38 @@ h3{
     margin-left:2rem;
 }
 #contact{
+    display:flex;
+    flex-flow:column;
+    align-content:center;
+    justify-content:center;
 }
+
 #our-story{
     color:var(--liver);
     text-align:justify;
 line-height:2rem;}
+
+footer{
+    height:5rem;
+    background-color:var(--cadet-blue);
+    color:white;    
+    display:flex;
+    width:100vw;
+    justify-content:center;   
+    align-items:center;
+}
+footer span {
+    display:flex;
+    align-items:center;    
+}
+footer span a {
+    margin-left:0.5rem;
+    text-decoration:none;
+    font-weight:800;
+    color:black;
+    transition: all linear 0.2s;
+}
+footer span a:hover{
+    color:white;
+}
+#map {margin:2rem;}
