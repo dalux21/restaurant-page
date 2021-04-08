@@ -1,9 +1,8 @@
-const initialPageLoad = () => {
+const initialPageLoad = (function() {
 
 const content = document.getElementById('content')
+const container = document.getElementById('container')
 
-    createHeader()
-    createNavBar()
 
 
     function createHeader(){
@@ -44,7 +43,13 @@ const content = document.getElementById('content')
         content.appendChild(navBar)
     }
 
+    function createFooter() {
+        const footer = document.createElement('footer')
+        footer.innerHTML = `<span><p>Copyright 2021 </p> <a href="http://www.github.com/dalux21">  Davide Lucifora</a><span>`
+        container.appendChild(footer)
+    }
 
-}
+    return {createHeader, createNavBar, createFooter}
+})()
 
 export default initialPageLoad

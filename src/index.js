@@ -5,8 +5,10 @@ import loadMenu from "./menu"
 import loadContact from "./contact"
 
 
-initialPageLoad()
+initialPageLoad.createHeader()
+initialPageLoad.createNavBar()
 loadHome()
+initialPageLoad.createFooter()
 
 document.querySelectorAll('.nav-link').forEach(link => {
     link.addEventListener('click', tabClick)
@@ -26,4 +28,7 @@ function tabClick(e){
         case 'contact-tab':
             loadContact()
     }
+
 }
+
+
